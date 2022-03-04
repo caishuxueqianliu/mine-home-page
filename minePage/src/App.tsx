@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import logo from './logo.svg'
-import {HashRouter, Route,Routes, Link } from 'react-router-dom'
+import {BrowserRouter, Route,Routes, Link } from 'react-router-dom'
 import Header from './components/header/header'
 import Main from './components/main/main'
 import Footer from './components/footer/footer'
@@ -18,12 +18,12 @@ function App() {
 
     <div className="App">
       <Header/>
-      <HashRouter>
+      <BrowserRouter>
           <Routes>
             <Route path="/" element={<Main/>}/>
             <Route path="/project/:id" element={<Project/>} />
           </Routes>
-      </HashRouter>
+      </BrowserRouter>
       <Footer/>
     </div>
 

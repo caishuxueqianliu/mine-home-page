@@ -52,7 +52,7 @@ const Project = (props:any) => {
                                        {/*<p className="lead">项目截图 </p>*/}
                                    </div>
                                    <div className="col-md-8 order-md-1">
-                                       <img style={{height:500}} className={'bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto'} src={`http://localhost:8001/assets/images/project/${productabbr}/${item}.png`} alt=""/>
+                                       <img style={{height:500}} className={'bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto'} src={`https://api.liuhao.website/assets/images/project/${productabbr}/${item}.png`} alt=""/>
                                    </div>
                                </div>
 

@@ -7,7 +7,7 @@
 
 import request from '../utils/request'
 
-const BASE = 'http://localhost:8001'
+const BASE = '/api'
 
 /** 项目列表接口 GET /project/projectList */
 export async function getProjectList(options?: { [key: string]: any }) {

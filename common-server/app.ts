@@ -5,8 +5,8 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const fs = require('fs')
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
-var projectRouter = require('./routes/project');
+// var usersRouter = require('./routes/users');
+// var projectRouter = require('./routes/project');
 const app: express.Application = express();
 //设置跨域访问
 app.all('*', function (req, res, next) {
@@ -29,8 +29,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/images/', express.static(path.join(__dirname, './images/')));
 app.use("/assets/", express.static(path.join(__dirname, './assets/')));
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
-app.use('/project',projectRouter)
+// app.use('/users', usersRouter);
+// app.use('/project',projectRouter)
 // catch 404 and forward to error handler
 // app.use(function(req, res, next) {
 //   next(createError(404));
