@@ -1,10 +1,11 @@
 import express, {Router, Request, Response, NextFunction} from 'express';
 const app: express.Application = express();
-const router: Router = Router();
-const {readFileContent} = require('../utils/fileOper')
-var cookieParser = require('cookie-parser');
-app.use(cookieParser());
+// const router: Router = Router();
+// const {readFileContent} = require('../utils/fileOper')
+// var cookieParser = require('cookie-parser');
+// app.use(cookieParser());
 app.use('/homepage/', require('./project'));
+app.use('/homepage/', require('./users'));
 
 
 
