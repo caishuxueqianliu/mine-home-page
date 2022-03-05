@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import {useEffect, useState} from 'react'
 import logo from './logo.svg'
 import {BrowserRouter, Route,Routes, Link } from 'react-router-dom'
 import Header from './components/header/header'
@@ -9,9 +9,11 @@ import './App.css'
 import './assets/css/style.css'
 import './assets/css/carousel.css'
 import './assets/css/style.css'
+import { getLog } from './services/project'
 function App() {
-  const [count, setCount] = useState(0)
-
+  useEffect(()=>{
+      getLog({path:'/'})
+  })
   return (
 
 

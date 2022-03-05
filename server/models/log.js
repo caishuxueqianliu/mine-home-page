@@ -1,8 +1,8 @@
-// @ts-ignore
-const { DataTypes} = require("sequelize");
-// @ts-ignore
+const {
+    DataTypes
+} = require("sequelize");
 const sequelize = require('../mysql/mysql')
-const Logs = sequelize.define("log", {
+const Log = sequelize.define("log", {
     id: {
         type: DataTypes.INTEGER,
         allowNull: false,
@@ -12,13 +12,12 @@ const Logs = sequelize.define("log", {
     ip: {
         type: DataTypes.STRING
     },
-    path: {
-        type: DataTypes.STRING
-    }
+
+
 });
 
 (async () => {
-    await Logs.sync();
+    await Log.sync();
     // 这里是代码
 })();
-module.exports = Logs
+module.exports = Log

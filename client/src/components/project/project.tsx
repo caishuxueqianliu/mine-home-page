@@ -1,5 +1,5 @@
 import {useEffect, useState} from 'react'
-import {getProjectInfo} from "../../services/project";
+import {getLog, getProjectInfo} from "../../services/project";
 import { useParams } from 'react-router-dom'
 type IImgList = Array<number> | never[]
 
@@ -9,6 +9,7 @@ const Project = (props:any) => {
     const [imgList,setImgList] = useState([])
     const [productabbr,setProductabbr] = useState('')
     useEffect(()=>{
+
         getProjectInfo({id}).then(res=>{
             // let arr:IImgList
             let arr:IImgList = []
@@ -18,8 +19,12 @@ const Project = (props:any) => {
             setInfo( res.data)
             setImgList(arr)
             setProductabbr(res.data.abbr)
+
         })
     },[])
+    useEffect(()=>{
+        getLog({path:'/' + productabbr})
+    },[productabbr])
     const codeUrl = (url:string) =>{
         window.open(url)
     }

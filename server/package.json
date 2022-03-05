@@ -9,14 +9,19 @@
     "server": "ts-node app.ts"
   },
   "dependencies": {
+    "cheerio": "^1.0.0-rc.10",
     "cookie-parser": "~1.4.4",
+    "crypto": "^1.0.1",
     "debug": "~2.6.9",
     "ejs": "~2.6.1",
     "express": "^4.17.2",
     "http-errors": "~1.6.3",
+    "iconv-lite": "^0.6.3",
     "morgan": "~1.9.1",
     "mysql": "^2.18.1",
     "mysql2": "^2.3.3",
+    "oicq": "^2.2.0",
+    "request-promise": "^4.2.6",
     "sequelize": "^6.17.0"
   },
   "devDependencies": {

@@ -6,6 +6,7 @@ const app: express.Application = express();
 // app.use(cookieParser());
 app.use('/homepage/', require('./project'));
 app.use('/homepage/', require('./users'));
+app.use('/homepage/', require('./oicq'));
 
 
 

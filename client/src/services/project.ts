@@ -9,7 +9,7 @@ import request from '../utils/request'
 
 const BASE = '/api'
 
-/** 项目列表接口 GET /project/projectList */
+/** 项目列表接口 GET /homepage/projectList */
 export async function getProjectList(options?: { [key: string]: any }) {
     return request({
         url: BASE + '/homepage/projectList',
@@ -18,7 +18,7 @@ export async function getProjectList(options?: { [key: string]: any }) {
     })
 }
 
-/** 项目详情接口 GET /project/projectInfo */
+/** 项目详情接口 GET /homepage/projectInfo */
 export async function getProjectInfo(params:{ id:string | undefined },options?: { [key: string]: any }) {
     return request({
         url: BASE + '/homepage/projectInfo',
@@ -28,3 +28,12 @@ export async function getProjectInfo(params:{ id:string | undefined },options?: 
     })
 }
 
+/** 上传ip日志信息 GET /homepage/log */
+export async function getLog(params:{ path:string | undefined },options?: { [key: string]: any }) {
+    return request({
+        url: BASE + '/homepage/log',
+        params,
+        method: 'GET',
+        ...(options || {})
+    })
+}
