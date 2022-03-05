@@ -23,7 +23,7 @@ const [list,setList] = useState([])
                                 <Link style={{textDecoration: "none"}} to={`/project/${item.id}` } key={item.id} className="col-lg-4 col-md-6 mt-4" data-aos="zoom-in" data-aos-delay="100">
                                     <div className="icon-box">
                                         <div >
-                                            <img src={`https://api.liuhao.website/assets/images/${item.icon}`} className="icon"/>
+                                            <img src={`/images/${item.icon}`} className="icon"/>
                                         </div>
                                         <h4><a style={{textDecoration: "none"}} href="#">{item.title}</a></h4>
                                         <h6  style={{color:'black'}}>{item.desc}<br/></h6>

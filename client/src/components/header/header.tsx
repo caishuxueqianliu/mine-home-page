@@ -18,10 +18,10 @@ const  Header = ()=>{
                                 <a href={'https://www.liuhao.website/'} className="nav-link active" aria-current="page" >Home</a>
                             </li>
                             <li className="nav-item nav-menu">
-                                <a className="nav-link" href="https://www.liuhao.website/resumd/" target={'_blank'}>Resume</a>
+                                <a className="nav-link" href="https://resumd.liuhao.website" target={'_blank'}>Resume</a>
                             </li>
                             <li className="nav-item nav-menu">
-                                <a className="nav-link " href="https://www.liuhao.website/blog/"  target={'_blank'}>Blog</a>
+                                <a className="nav-link " href="https://blog.liuhao.website"  target={'_blank'}>Blog</a>
                             </li>
                         </ul>
                         <form className="d-flex">
