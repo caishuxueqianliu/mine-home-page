@@ -11,6 +11,7 @@ const Iconv = require('iconv-lite');
 const rp = require('request-promise');
 const Log = require('../models/log')
 const getIp = require('../utils/getIp')
+const handle = require('../handle/index')
 // 群配置
 const qunList =
     defaultConfig.qunList
@@ -171,10 +172,13 @@ client.on("notice", (data:any) => console.log(data));
  */
  async function messageProcess1(data:any, text:string) {
     let str;
-
     str = text.replace(/^\s*|\s*$/g,"");
 
     switch (str) {
+        case '更新blog':
+        case '更新博客':
+            handle.blog(client,data)
+            break
         case "查询":
             const logs = await Log.findAll()
             if(!logs.length){

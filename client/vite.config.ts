@@ -8,8 +8,8 @@ export default defineConfig({
     // port: 3001,
     proxy: {
       '/api': {
-        // target: 'https://api.liuhao.website/',
-         target: 'http://localhost:8001/',
+        target: 'http://101.35.251.32:8001/',
+        // target: 'http://localhost:8001/',
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api/, '')
       }
